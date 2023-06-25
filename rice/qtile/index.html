@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>Qtile &ndash; egujito</title>
+<meta name="description" content="This is egujito&#39;s personal website">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://egujito.github.io/css/palettes/base16-gruvbox-dark-hard.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/custom.css">
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="https://egujito.github.io" class="page__logo-inner">egujito</a></h1>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/projects/" title="">Projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/rice/" title="">rice</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Qtile</h1>
+    </header>
+    
+    <div class="content__body">
+        <hr>
+<h3 id="qtile-running-on-my-machine">Qtile running on my machine:</h3>
+<p>Using <a href="https://github.com/ogham/exa"><code>exa</code></a> to list the files and <a href="/projects/cff"><code>cff</code></a> to fetch sys info.</p>
+<p><img src="https://raw.githubusercontent.com/egujito/egujito/main/2023-06-25-183251_1920x1080_scrot.png" alt="Rice Picture"></p>
+<h3 id="config-file-tree">Config file tree:</h3>
+<pre tabindex="0"><code>.
+├── autostart.sh
+├── bar1.py
+├── cbonsai.png
+├── config.py
+├── consts.py
+├── gruvbox.py
+├── keys.py
+├── README.md
+└── workspaces.py
+</code></pre><h3 id="colorscheme-and-constant-variables">Colorscheme and constant variables:</h3>
+<hr>
+<p>As you can see from this site I love gruvbox. So I use a gruvbox palette defined in <code>gruvbox.py</code>. I then included this file in the other configuration files where I needed access to the colorscheme.
+Other constant variables are defined in <code>consts.py</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mod <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mod4&#34;</span> <span style="color:#75715e"># SUPER</span>
+</span></span><span style="display:flex;"><span>terminal <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xfce4-terminal&#34;</span>
+</span></span><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;firefox&#34;</span>
+</span></span><span style="display:flex;"><span>updt_cmd<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Arch_checkupdates&#34;</span> <span style="color:#75715e"># Command for the CheckUpdates widget</span>
+</span></span></code></pre></div><h3 id="workspaces-organization">Workspaces Organization:</h3>
+<hr>
+<p>As you can see in the picture my config of qtile has 5 workspaces defined in <code>workspaces.py</code> (groups) (inspired by dt):</p>
+<ul>
+<li><strong>dev</strong>  - for development purposes</li>
+<li><strong>sys</strong>  - to edit system configuration files or to run local servers.</li>
+<li><strong>www</strong>  - web and documentation</li>
+<li><strong>game</strong> - gaming</li>
+<li><strong>chat</strong> - discord and music</li>
+</ul>
+<h3 id="modules">Modules:</h3>
+<hr>
+<ul>
+<li><strong>GroupBox</strong> - displays the group</li>
+<li><strong>CurrentLayoutIcon</strong> - display the icon of the current layout of the wm</li>
+<li><strong>Prompt</strong> - Run command prompt</li>
+<li><strong>WindowName</strong> - Shows the window name and its state</li>
+<li><strong>Memory</strong> - Used Ram/Total Ram</li>
+<li><strong>DF</strong> - Free storage/Total storage</li>
+<li><strong>CheckUpdates</strong> - Checks the updates with the <code>updt_cmd</code> defined in <code>consts.py</code></li>
+<li><em><strong>EXTRA</strong></em> <strong>UPowerWidget</strong> - Gets the battery.</li>
+<li><strong>Volume</strong> - Shows the volume and let&rsquo;s you change it by scrolling mouse</li>
+<li><strong>WidgetClock</strong> - Configured in two different instances to show time and date separately</li>
+<li><strong>Systray</strong> - Simple systray</li>
+<li><strong>QuickExit</strong> - Easy logoff button</li>
+</ul>
+<h3 id="keys">Keys:</h3>
+<hr>
+<p>The keys are pretty default and are defined in <code>keys.h</code></p>
+
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<div class="aside__about">
+    
+<h1 class="about__title">Hello, World!</h1>
+<p class="about__description">This is egujito&rsquo;s personal website</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    
+    
+
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"><p>
+    
+    
+    
+    
+    
+    
+      
+    
+      
+    
+    
+    
+</p>
+<br /><br />
+<p class="copyright"></p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
+
+        </div>
+    </body>
+
+</html>

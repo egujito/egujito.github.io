@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rice on egujito</title>
+    <link>https://egujito.github.io/rice/</link>
+    <description>Recent content in Rice on egujito</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://egujito.github.io/rice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qtile</title>
+      <link>https://egujito.github.io/rice/qtile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/rice/qtile/</guid>
+      <description>Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
+Config file tree: . ├── autostart.sh ├── bar1.py ├── cbonsai.png ├── config.py ├── consts.py ├── gruvbox.py ├── keys.py ├── README.md └── workspaces.py Colorscheme and constant variables: As you can see from this site I love gruvbox. So I use a gruvbox palette defined in gruvbox.py. I then included this file in the other configuration files where I needed access to the colorscheme.</description>
+    </item>
+    
+  </channel>
+</rss>
