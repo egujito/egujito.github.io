@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>Dwm &ndash; egujito</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://egujito.github.io/css/palettes/base16-gruvbox-dark-hard.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/custom.css">
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="https://egujito.github.io" class="page__logo-inner">egujito</a></h1>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/projects/" title="">Projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/rice/" title="">configuration</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/topic/" title="">opinions</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Dwm</h1>
+    </header>
+    
+    <div class="content__body">
+        <p><em><strong>I do not use dwm currently but my build of dwm and dwmblocks can be found here: <a href="https://github.com/egujito/suckless-repos">Github Repo</a></strong></em></p>
+<h3 id="from-readmemd">From README.md</h3>
+<h1 id="suckless-software-builds">Suckless Software builds.</h1>
+<h2 id="my-rice">My Rice:</h2>
+<h2 id="httpsrawgithubusercontentcomegujitosuckless-reposmasterwmpng"><img src="https://raw.githubusercontent.com/egujito/suckless-repos/master/wm.png" alt=""></h2>
+<p>This repo contains my builds of:</p>
+<ul>
+<li>DWM - The suckless window manager</li>
+<li>DWMBlocks - Status bar and module scripts</li>
+<li>DMenu - For now, it is default</li>
+</ul>
+<h3 id="dwm">DWM</h3>
+<p>A Very minimal build of dwm. Uses pywal colorscheme at <a href="https://github.com/egujito/suckless-repos/blob/master/dwm/colors-wal-dwm.h"><code>colors-wal-dwm.h</code></a>, patched to remove Urgent color scheme.</p>
+<p><em><strong>IMPORTANT</strong></em></p>
+<p>Make sure you change everything in <a href="https://github.com/egujito/suckless-repos/blob/master/dwm/autostart.sh"><code>autostart.h</code></a> to fit your system. If you want those (not!) workspaces icons use a nerdfont.</p>
+<h3 id="dwmblocks">DWMBLOCKS</h3>
+<p>Modules:</p>
+<ul>
+<li><a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/scripts/pkgs"><code>pkgs</code></a></li>
+<li><a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/scripts/ram"><code>ram</code></a></li>
+<li><a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/scripts/battery"><code>battery</code></a></li>
+<li><a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/scripts/time"><code>time</code></a></li>
+<li><a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/scripts/date"><code>date</code></a></li>
+</ul>
+<p>Adding a module:
+Add it to this array in <a href="https://github.com/egujito/suckless-repos/blob/master/dwmblocks/blocks.def.h#LL1C1-L8C3"><code>blocks.h</code></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> Block blocks[] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*Icon*/</span> <span style="color:#75715e">/*Command*/</span> <span style="color:#75715e">/*Update Interval*/</span> <span style="color:#75715e">/*Update Signal*/</span>
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;~/path/to/script&#34;</span>, <span style="color:#f92672">-</span>, <span style="color:#f92672">-</span>}
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+
+<ul class="aside__social-links">
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    
+    
+
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"></footer>
+
+        </div>
+    </body>
+
+</html>

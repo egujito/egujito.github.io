@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head><title>CFF - C Fast Fetch - Developed with l0py2 &ndash; egujito</title>
-<meta name="description" content="">
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8"/>
@@ -30,7 +30,9 @@
     
     <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/projects/" title="">Projects</a></li>
     
-    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/rice/" title="">rice</a></li>
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/rice/" title="">configuration</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/topic/" title="">opinions</a></li>
     
     </ul>
 </nav>
@@ -44,12 +46,104 @@
     
     <div class="content__body">
         <hr>
-<h4 id="what-is-cff">What is CFF?</h4>
-<p>CFF consists in a system fetch written for GNU/Linux system. It uses the Kernel api to fetch info such as the uptime and the kernel release name.</p>
-<hr>
-<h4 id="why-cff">Why CFF?</h4>
-<p>CFF is essencially a project developed for fun. However, it is the fastest fetching program due to being written in C. Compared to pfetch or even neofetch we get much lower execution times. Usually around 2 milliseconds.</p>
-<p>Moreover, it is highly configurable and extensible. Almost everything is configurable through the <code>config.h</code> file.</p>
+<p><a href="https://github.com/egujito/cff">Github Repo</a></p>
+<h3 id="from-readmemd">From README.md:</h3>
+<h1 id="-cff---c-fast-fetch">🚀 CFF - C Fast Fetch</h1>
+<p>A fetch that aims to run as fast as possible. Developed for fun (and for GNU/Linux systems).</p>
+<p><img src="https://raw.githubusercontent.com/egujito/cff/master/cff.png" alt=""></p>
+<p><em>Blazingly fast  🏎️💨</em></p>
+<h4 id="building">Building:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make
+</span></span></code></pre></div><h4 id="cleaning">Cleaning:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make clean
+</span></span></code></pre></div><h4 id="running-locally">Running (locally):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ./cff
+</span></span></code></pre></div><h4 id="installinguninstalling">Installing/Uninstalling:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo make install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo make uninstall
+</span></span></code></pre></div><h4 id="running">Running:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cff
+</span></span></code></pre></div><h1 id="configh"><code>config.h</code></h1>
+<h3 id="variables-and-macros">Variables and Macros:</h3>
+<p><code>LEFT_PAD</code>: If you define icons in icons[], makes sure you set this to &quot; &quot; so the module name doesn&rsquo;t stick to the icon. (Default: &ldquo;&rdquo;)</p>
+<p><code>FETCH_COLOR</code>: sets the color to the names of the modules (Default: BLUE)</p>
+<p><code>LOGO_COLOR</code>: sets the color the logo of the fetch. (Default: CYAN)</p>
+<p><code>static const char* icons[]</code>: You can define the icons to the builtin modules here,
+Default:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> icons[] <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span> };
+</span></span></code></pre></div><p><code>static const int fetch_order[]</code>: You can define the order of the fetch here. The default one is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> fetch_order[] <span style="color:#f92672">=</span> { USER, HOST, CWD, UPTIME, RAM, KERNEL, DE, PALETTE };
+</span></span></code></pre></div><p><code>static struct SCRIPT scripts[]</code>: Here is where external scripts go. This array is of the SCRIPT datatype which has 3 attributes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> SCRIPT {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> path;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> icon;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>If you wish to add an external script first you add it to the scripts array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">struct</span> SCRIPT scripts[] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>	{ <span style="color:#e6db74">&#34;path/to/script&#34;</span>, <span style="color:#e6db74">&#34;script icon&#34;</span>, <span style="color:#e6db74">&#34;script name (the name that shows on the fetch)&#34;</span> }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Then you add <code>EXTERNAL+i</code> to the <code>fetch_order</code> array, where the i is equal to the index of your script in the <code>scripts</code> array.</p>
+<p>⚠️ Keep in mind the following when using external scripts:</p>
+<ul>
+<li>The buffer that is allocated to store the script output is equal to 128;</li>
+<li>Only the first line of the output of the script is read;</li>
+<li>Using external scripts might hurt the execution time which goes against the first premise of this program (&ldquo;to run as fast as possible&rdquo;).</li>
+</ul>
+<h3 id="modules">Modules:</h3>
+<table>
+<thead>
+<tr>
+<th>Macro</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HOST</td>
+<td>Hostname of the OS</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>Current user name</td>
+</tr>
+<tr>
+<td>UPTIME</td>
+<td>Seconds since boot</td>
+</tr>
+<tr>
+<td>CWD</td>
+<td>Current working directory</td>
+</tr>
+<tr>
+<td>KERNEL</td>
+<td>Kernel release</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>Total Ram</td>
+</tr>
+<tr>
+<td>EXTERNAL + i</td>
+<td>Executes and gets the output of <code>scripts[i]</code></td>
+</tr>
+<tr>
+<td>PALETTE</td>
+<td>Prints the color palette. Should be at the end of <code>fetch_order[]</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="todo">TODO:</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Add and update more modules:</li>
+<li><input checked="" disabled="" type="checkbox"> release name</li>
+<li><input checked="" disabled="" type="checkbox"> external scripting</li>
+<li><input checked="" disabled="" type="checkbox"> Add Fetch ASCII ART</li>
+<li><input checked="" disabled="" type="checkbox"> Color support</li>
+</ul>
+<h2 id="authors">Authors:</h2>
+<p><a href="https://github.com/egujito/cff/graphs/contributors"><img src="https://contrib.rocks/image?repo=egujito/cff" alt="Authors"></a></p>
 
     </div>
     <footer class="content__footer"></footer>
@@ -58,12 +152,6 @@
 
             <section class="page__aside">
                 <div class="aside__about">
-<div class="aside__about">
-    
-<h1 class="about__title">Hello, World!</h1>
-
-</div>
-
 
 <ul class="aside__social-links">
     
@@ -79,24 +167,7 @@
                 </div>
             </section>
 
-            <footer class="page__footer"><p>
-    
-    
-    
-    
-    
-    
-      
-    
-      
-    
-    
-    
-</p>
-<br /><br />
-<p class="copyright"></p>
-<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
-</footer>
+            <footer class="page__footer"></footer>
 
         </div>
     </body>

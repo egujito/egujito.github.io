@@ -12,8 +12,25 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://egujito.github.io/projects/cff/</guid>
-      <description>What is CFF? CFF consists in a system fetch written for GNU/Linux system. It uses the Kernel api to fetch info such as the uptime and the kernel release name.
-Why CFF? CFF is essencially a project developed for fun. However, it is the fastest fetching program due to being written in C. Compared to pfetch or even neofetch we get much lower execution times. Usually around 2 milliseconds.</description>
+      <description>Github Repo
+From README.md: 🚀 CFF - C Fast Fetch A fetch that aims to run as fast as possible. Developed for fun (and for GNU/Linux systems).
+Blazingly fast 🏎️💨
+Building: $ make Cleaning: $ make clean Running (locally): $ ./cff Installing/Uninstalling: $ sudo make install $ sudo make uninstall Running: $ cff config.h Variables and Macros: LEFT_PAD: If you define icons in icons[], makes sure you set this to &amp;quot; &amp;quot; so the module name doesn&amp;rsquo;t stick to the icon.</description>
+    </item>
+    
+    <item>
+      <title>Rusty Todo - TODO-TUI tracker written in Rust</title>
+      <link>https://egujito.github.io/projects/rusty-todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/projects/rusty-todo/</guid>
+      <description>Github Repo
+From README.md# rusty-todo I wanted to remake a project I had done that used ncurses.h in C, the code was messy and I didn&amp;rsquo;t have the patience to refactor it. So why not do rewrite it in rust as my first project?
+(not finished yet)
+rusty-todo in edit mode (InputState::Edit):
+compiling and running Compile:
+$ cargo build Compile &amp;amp; run:
+$ cargo run Guide Managing tasks: Move upwards: k</description>
     </item>
     
   </channel>

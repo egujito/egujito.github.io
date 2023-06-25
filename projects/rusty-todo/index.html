@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>Rusty Todo - TODO-TUI tracker written in Rust &ndash; egujito</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+
+
+<link rel="stylesheet" href="https://egujito.github.io/css/palettes/base16-gruvbox-dark-hard.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://egujito.github.io/css/custom.css">
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="https://egujito.github.io" class="page__logo-inner">egujito</a></h1>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/projects/" title="">Projects</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/rice/" title="">configuration</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://egujito.github.io/topic/" title="">opinions</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Rusty Todo - TODO-TUI tracker written in Rust</h1>
+    </header>
+    
+    <div class="content__body">
+        <hr>
+<p><a href="https://github.com/egujito/rusty-todo">Github Repo</a></p>
+<h3 id="from-readmemd-rusty-todo">From README.md# rusty-todo</h3>
+<p>I wanted to remake a project I had done that used <code>ncurses.h</code> in C, the code was messy and I didn&rsquo;t have the patience to refactor it. So why not do rewrite it in rust as my first project?</p>
+<p>(not finished yet)</p>
+<p><em>rusty-todo in edit mode (<code>InputState::Edit</code>):</em></p>
+<p><img src="https://raw.githubusercontent.com/egujito/rusty-todo/master/e1.png" alt=""></p>
+<h1 id="compiling-and-running">compiling and running</h1>
+<p>Compile:</p>
+<pre tabindex="0"><code>$ cargo build
+</code></pre><p>Compile &amp; run:</p>
+<pre tabindex="0"><code>$ cargo run
+</code></pre><h1 id="guide">Guide</h1>
+<h3 id="managing-tasks">Managing tasks:</h3>
+<p>Move upwards: <!-- raw HTML omitted -->k<!-- raw HTML omitted --></p>
+<p>Move downwards: <!-- raw HTML omitted -->j<!-- raw HTML omitted --></p>
+<p>New task: <!-- raw HTML omitted -->i<!-- raw HTML omitted --></p>
+<p>Edit task: <!-- raw HTML omitted -->e<!-- raw HTML omitted --></p>
+<p>Delete current task: <!-- raw HTML omitted -->d<!-- raw HTML omitted --></p>
+<p>Toggle task state: <!-- raw HTML omitted -->Enter<!-- raw HTML omitted --></p>
+<p>Quit with exit code 0 (automatically saves state): <!-- raw HTML omitted -->q<!-- raw HTML omitted --></p>
+<h3 id="insertingediting-tasks">Inserting/editing tasks:</h3>
+<p>Discard the buffer: <!-- raw HTML omitted -->Escape<!-- raw HTML omitted --></p>
+<p>Confirm addition/edition of task: <!-- raw HTML omitted -->Enter<!-- raw HTML omitted --></p>
+<p>Cursor to the left: <!-- raw HTML omitted -->Left Arrow Key<!-- raw HTML omitted --></p>
+<p>Cursor to the right: <!-- raw HTML omitted -->Right Arrow Key<!-- raw HTML omitted --></p>
+<p>Delete a character from the buffer: <!-- raw HTML omitted -->Backspace<!-- raw HTML omitted --></p>
+<h1 id="todo">Todo</h1>
+<ul>
+<li>Implement the way of dragging tasks up or down the list</li>
+</ul>
+
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+
+<ul class="aside__social-links">
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    
+    
+
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"></footer>
+
+        </div>
+    </body>
+
+</html>

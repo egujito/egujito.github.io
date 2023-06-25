@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rice on egujito</title>
+    <title>Configuration for: on egujito</title>
     <link>https://egujito.github.io/rice/</link>
-    <description>Recent content in Rice on egujito</description>
+    <description>Recent content in Configuration for: on egujito</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://egujito.github.io/rice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dwm</title>
+      <link>https://egujito.github.io/rice/dwm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/rice/dwm/</guid>
+      <description>I do not use dwm currently but my build of dwm and dwmblocks can be found here: Github Repo
+From README.md Suckless Software builds. My Rice: This repo contains my builds of:
+DWM - The suckless window manager DWMBlocks - Status bar and module scripts DMenu - For now, it is default DWM A Very minimal build of dwm. Uses pywal colorscheme at colors-wal-dwm.h, patched to remove Urgent color scheme.</description>
+    </item>
+    
     <item>
       <title>Qtile</title>
       <link>https://egujito.github.io/rice/qtile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://egujito.github.io/rice/qtile/</guid>
-      <description>Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
-Config file tree: . ├── autostart.sh -- script called with the startup_once hook ├── bar1.py -- bar configuration ├── config.py -- layouts and startup ├── consts.py -- constants ├── gruvbox.py -- colorscheme ├── keys.py -- keybindings └── workspaces.py -- groups autostart.sh: The autostart calls 4 commands and it is called in config.py:</description>
+      <description>Github Repo
+Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
+Config file tree: . ├── autostart.sh -- script called with the startup_once hook ├── bar1.py -- bar configuration ├── config.py -- layouts and startup ├── consts.py -- constants ├── gruvbox.py -- colorscheme ├── keys.py -- keybindings └── workspaces.py -- groups autostart.sh: The autostart calls 4 commands and it is called in config.</description>
     </item>
     
   </channel>

@@ -12,8 +12,31 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://egujito.github.io/projects/cff/</guid>
-      <description>What is CFF? CFF consists in a system fetch written for GNU/Linux system. It uses the Kernel api to fetch info such as the uptime and the kernel release name.
-Why CFF? CFF is essencially a project developed for fun. However, it is the fastest fetching program due to being written in C. Compared to pfetch or even neofetch we get much lower execution times. Usually around 2 milliseconds.</description>
+      <description>Github Repo
+From README.md: 🚀 CFF - C Fast Fetch A fetch that aims to run as fast as possible. Developed for fun (and for GNU/Linux systems).
+Blazingly fast 🏎️💨
+Building: $ make Cleaning: $ make clean Running (locally): $ ./cff Installing/Uninstalling: $ sudo make install $ sudo make uninstall Running: $ cff config.h Variables and Macros: LEFT_PAD: If you define icons in icons[], makes sure you set this to &amp;quot; &amp;quot; so the module name doesn&amp;rsquo;t stick to the icon.</description>
+    </item>
+    
+    <item>
+      <title>Dwm</title>
+      <link>https://egujito.github.io/rice/dwm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/rice/dwm/</guid>
+      <description>I do not use dwm currently but my build of dwm and dwmblocks can be found here: Github Repo
+From README.md Suckless Software builds. My Rice: This repo contains my builds of:
+DWM - The suckless window manager DWMBlocks - Status bar and module scripts DMenu - For now, it is default DWM A Very minimal build of dwm. Uses pywal colorscheme at colors-wal-dwm.h, patched to remove Urgent color scheme.</description>
+    </item>
+    
+    <item>
+      <title>Dwm vs Qtile</title>
+      <link>https://egujito.github.io/topic/dwm-vs-qtile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/topic/dwm-vs-qtile/</guid>
+      <description>Why I Changed from DWM to Qtile. Both managers are configured in the language they are built in that is why I love both so much. (DWM - C; Qtile - Python)
+Pros of DWM Great default - DWM is great out of the box and if you want something simple you just create somekind of script to update xsetroot -name and you are good to go; Patches - Many patches have been released that extend the power of dwm; Fast; Solid Documentation - Documentation is great; Cons of DWM Patching - Patching comes as a pretty difficult task.</description>
     </item>
     
     <item>
@@ -22,8 +45,24 @@ Why CFF? CFF is essencially a project developed for fun. However, it is the fast
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://egujito.github.io/rice/qtile/</guid>
-      <description>Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
-Config file tree: . ├── autostart.sh -- script called with the startup_once hook ├── bar1.py -- bar configuration ├── config.py -- layouts and startup ├── consts.py -- constants ├── gruvbox.py -- colorscheme ├── keys.py -- keybindings └── workspaces.py -- groups autostart.sh: The autostart calls 4 commands and it is called in config.py:</description>
+      <description>Github Repo
+Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
+Config file tree: . ├── autostart.sh -- script called with the startup_once hook ├── bar1.py -- bar configuration ├── config.py -- layouts and startup ├── consts.py -- constants ├── gruvbox.py -- colorscheme ├── keys.py -- keybindings └── workspaces.py -- groups autostart.sh: The autostart calls 4 commands and it is called in config.</description>
+    </item>
+    
+    <item>
+      <title>Rusty Todo - TODO-TUI tracker written in Rust</title>
+      <link>https://egujito.github.io/projects/rusty-todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://egujito.github.io/projects/rusty-todo/</guid>
+      <description>Github Repo
+From README.md# rusty-todo I wanted to remake a project I had done that used ncurses.h in C, the code was messy and I didn&amp;rsquo;t have the patience to refactor it. So why not do rewrite it in rust as my first project?
+(not finished yet)
+rusty-todo in edit mode (InputState::Edit):
+compiling and running Compile:
+$ cargo build Compile &amp;amp; run:
+$ cargo run Guide Managing tasks: Move upwards: k</description>
     </item>
     
   </channel>
