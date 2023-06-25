@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head><title>Qtile &ndash; egujito</title>
-<meta name="description" content="This is egujito&#39;s personal website">
+<meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8"/>
@@ -49,16 +49,20 @@
 <p><img src="https://raw.githubusercontent.com/egujito/egujito/main/2023-06-25-183251_1920x1080_scrot.png" alt="Rice Picture"></p>
 <h3 id="config-file-tree">Config file tree:</h3>
 <pre tabindex="0"><code>.
-├── autostart.sh
-├── bar1.py
-├── cbonsai.png
-├── config.py
-├── consts.py
-├── gruvbox.py
-├── keys.py
-├── README.md
-└── workspaces.py
-</code></pre><h3 id="colorscheme-and-constant-variables">Colorscheme and constant variables:</h3>
+├── autostart.sh -- script called with the startup_once hook
+├── bar1.py -- bar configuration
+├── config.py -- layouts and startup
+├── consts.py -- constants
+├── gruvbox.py -- colorscheme
+├── keys.py -- keybindings
+└── workspaces.py -- groups
+</code></pre><h3 id="autostartsh"><code>autostart.sh</code>:</h3>
+<p>The autostart calls 4 commands and it is called in <code>config.py</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sh ~/.screenlayout/display.sh <span style="color:#75715e"># run my arandr script</span>
+</span></span><span style="display:flex;"><span>feh --bg-scale ~/Pictures/wallpapers/lonely-tree.jpg <span style="color:#75715e"># set wallpaper</span>
+</span></span><span style="display:flex;"><span>bash ~/gtkr.sh <span style="color:#75715e"># run a script that automatically sets a gtk theme based on the wallpaper</span>
+</span></span><span style="display:flex;"><span>picom --config ~/.config/picom/picom.conf &amp; <span style="color:#75715e"># run compositor (picom with ENDEAVOUROS default config)</span>
+</span></span></code></pre></div><h3 id="colorscheme-and-constant-variables">Colorscheme and constant variables:</h3>
 <hr>
 <p>As you can see from this site I love gruvbox. So I use a gruvbox palette defined in <code>gruvbox.py</code>. I then included this file in the other configuration files where I needed access to the colorscheme.
 Other constant variables are defined in <code>consts.py</code>:</p>
@@ -94,7 +98,15 @@ Other constant variables are defined in <code>consts.py</code>:</p>
 </ul>
 <h3 id="keys">Keys:</h3>
 <hr>
-<p>The keys are pretty default and are defined in <code>keys.h</code></p>
+<p>The keys are pretty default and are defined in <code>keys.h</code>:</p>
+<ul>
+<li><code>super + t</code> - launches the terminal</li>
+<li><code>super + w</code> - launches web browser</li>
+<li><code>super + p</code> - runs prompt to spawn a command</li>
+</ul>
+<h3 id="layouts">Layouts:</h3>
+<hr>
+<p>I only make use of 2 layouts: Columns and Max defined in <code>config.py</code>.</p>
 
     </div>
     <footer class="content__footer"></footer>
@@ -106,7 +118,7 @@ Other constant variables are defined in <code>consts.py</code>:</p>
 <div class="aside__about">
     
 <h1 class="about__title">Hello, World!</h1>
-<p class="about__description">This is egujito&rsquo;s personal website</p>
+
 </div>
 
 

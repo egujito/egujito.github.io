@@ -23,7 +23,7 @@ Why CFF? CFF is essencially a project developed for fun. However, it is the fast
       
       <guid>https://egujito.github.io/rice/qtile/</guid>
       <description>Qtile running on my machine: Using exa to list the files and cff to fetch sys info.
-Config file tree: . ├── autostart.sh ├── bar1.py ├── cbonsai.png ├── config.py ├── consts.py ├── gruvbox.py ├── keys.py ├── README.md └── workspaces.py Colorscheme and constant variables: As you can see from this site I love gruvbox. So I use a gruvbox palette defined in gruvbox.py. I then included this file in the other configuration files where I needed access to the colorscheme.</description>
+Config file tree: . ├── autostart.sh -- script called with the startup_once hook ├── bar1.py -- bar configuration ├── config.py -- layouts and startup ├── consts.py -- constants ├── gruvbox.py -- colorscheme ├── keys.py -- keybindings └── workspaces.py -- groups autostart.sh: The autostart calls 4 commands and it is called in config.py:</description>
     </item>
     
   </channel>
